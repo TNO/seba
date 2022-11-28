@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "seba"
+description = "The Seba optimizer library"
+readme = "README.md"
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Natural Language :: English",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Scientific/Engineering"
+]
+requires-python = ">=3.8"
+dynamic = ["version"]
+dependencies = []
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["seba"]
+
+[tool.setuptools.package-data]
+seba = ["py.typed"]
+
+[tool.setuptools.dynamic]
+version = {attr = "seba.version.__version__"}
+
+[tool.setuptools_scm]
+write_to = "src/seba/version.py"
+
+[project.optional-dependencies]
+docs = [
+    "mkdocs",
+    "mkdocstrings[python]",
+    "mkdocs-material"
+]

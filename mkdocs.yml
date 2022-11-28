@@ -1,0 +1,7 @@
+site_name: Seba Documentation
+
+theme:
+  name: material
+
+nav:
+  - Introduction: index.md

@@ -1,2 +1,2 @@
 # seba
-An ensemble based optimizer
+The soon-to-be-released open source ensemble-based optimizer.
